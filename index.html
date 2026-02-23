@@ -1,34 +1,120 @@
-<HTML>
-<BODY>
-<CENTER>
-<TABLE BORDER=1>
-<TR>
-<TD colspan=4>
-  
-<h1>
-<CENTER> <FONT COLOR= PURPLE> DE CAIRO'S RESORT</CENTER>
-</h1>
-<h2>
-<CENTER> <FONT COLOR:PINK> FEEL THE PEACE AND RELAXATION YOU NEED </CENTER>
-</h2>
-</TD>
-</TR>  
-  
-<TR>
-<TD colspan=4>
-  
-<TR>
-<TD> <FONT SIZE =5><a HREF=home.html> HOME </a> 
-<TD> <FONT SIZE =5> <a HREF=events.html> EVENT </a> 
-<TD> <FONT SIZE =5> <a HREF=contact.html> CONTACT US </a>
-<TD> <FONT SIZE =5><a HREF=product.html> PRODUCT</a>
-      
-  
-<TR>
-<TD colspan=4> <FONT SIZE=6 <FONT COLOR=GREEN> <CENTER> AMAZING </CENTER> </FONT> </TD> </TR>
-  
-<BODY BACKGROUND=background.jpg></BODY>
-  
-<TD colspan=2> <IMG SRC=landing1.jpg height=300>
-    
-<TD colspan=2> <IMG SRC=landing2.jpg height=300>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DE CAIRO'S RESORT</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: url('background.jpg') no-repeat center center/cover;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+header{
+    text-align:center;
+    padding:40px 20px;
+    background: rgba(255,255,255,0.8);
+}
+header h1{
+    color: purple;
+    font-size: 40px;
+}
+header h2{
+    color: pink;
+    margin-top:10px;
+}
+nav{
+    background: #222;
+    padding:15px;
+}
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:27px;
+}
+nav ul li a{
+    text-decoration:none;
+    color: white;
+    font-size:20px;
+    transition:0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active{
+    color:lightgreen;
+    border-bottom:2px solid lightgreen;
+}
+.amazing{
+    text-align:center;
+    padding:30px;
+    font-size:35px;
+    color:green;
+    background: rgba(255,255,255,0.7);
+}
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:40px;
+    flex-wrap:wrap;
+}
+
+.gallery img{
+    height:300px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>DE CAIRO'S RESORT</h1>
+    <h2>FEEL THE PEACE AND RELAXATION YOU NEED</h2>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="events.html">EVENT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+    </ul>
+</nav>
+
+<section class="amazing">
+    AMAZING
+</section>
+
+<section class="gallery">
+    <img src="landing1.jpg" alt="Resort Image 1">
+    <img src="landing2.jpg" alt="Resort Image 2">
+</section>
+
+<script>
+const links = document.querySelectorAll("nav ul li a");
+
+links.forEach(link => {
+    link.addEventListener("click", function(){
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+    });
+});
+</script>
+
+</body>
+</html>
