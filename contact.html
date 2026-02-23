@@ -1,38 +1,154 @@
-<HTML>
-<BODY>
-<HEAD>
-<TITLE> De Resort in Upper Becceril Cebu </TITLE>
-<meta name= "description" content= "IBR Resort, Swimming pool, Relaxation, Cebu, Upper Becceril, Pool Resort, local getway, Mountain view, Family-friendly, Leisure destintion">
-<meta name= "keywords" content= "IBR Resort Upper Becceril Cebu offers pools, rooms, services">
-</HEAD>
-<CENTER>
-<TABLE BORDER=1>
-  
-<TR>
-<TD colspan=7>
-  
-<h1>
-<CENTER> <FONT COLOR= PURPLE> Welcome to De Cairo's Resort </CENTER>
-</h1>
-<TR>
-<BODY BACKGROUND=background.jpg>
-<TD colspan=5>
-  
-<TR>
-<TD> <FONT SIZE =4><a HREF=home.html> HOME </a> 
-<TD> <FONT SIZE =4> <a HREF=events.html> EVENTS </a> 
-<TD> <FONT SIZE =4> <a HREF=contact.html> CONTACT US </a>
-<TD> <FONT SIZE =4><a HREF=product.html> PRODUCT </a>
-      
-  
-<TR>  
-<TR>
-<TD colspan=5>
-<h2>
-<FONT COLOR=PURPLE> <CENTER> <p> Gmail: cairojunjun@gmail.com
- <FONT COLOR=PURPLE> <CENTER> <p> Contact #:09753819563
- <FONT COLOR=PURPLE> <CENTER> <p> Address: Lower, Becerril,Boljoon,Cebu  
-<FONT COLOR=PURPLE FONT SIZE=5> <p> Contact Person: Jun Jun Cairo
-</TD>
-</TR>
-<TR>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | De Cairo's Resort Cebu</title>
+
+<meta name="description" content="Contact De Cairo's Resort in Lower Becerril, Boljoon, Cebu. Call or email us for bookings, inquiries, and holiday reservations.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(75,0,130,0.6), rgba(75,0,130,0.6)),
+    url('background.jpg') no-repeat center center/cover;
+    color:white;
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    position:relative;
+    transition:0.3s;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:white;
+    transition:0.4s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+.contact-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:85vh;
+    padding:40px 20px;
+}
+
+.contact-box{
+    background:white;
+    color:#333;
+    padding:50px;
+    border-radius:20px;
+    width:100%;
+    max-width:600px;
+    text-align:center;
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+    animation:fadeIn 1.5s ease;
+}
+
+.contact-box h1{
+    color:#5e2a84;
+    margin-bottom:25px;
+}
+
+.contact-info{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.contact-info strong{
+    color:#5e2a84;
+}
+.contact-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#5e2a84;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.contact-btn:hover{
+    background:#7b3db2;
+}
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">De Cairo's Resort</div>
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="contact-section">
+    <div class="contact-box">
+        <h1>Contact Us</h1>
+
+        <p class="contact-info"><strong>Email:</strong> cairojunjun@gmail.com</p>
+        <p class="contact-info"><strong>Contact Number:</strong> 0975 381 9563</p>
+        <p class="contact-info"><strong>Address:</strong> Lower Becerril, Boljoon, Cebu</p>
+        <p class="contact-info"><strong>Contact Person:</strong> Jun Jun Cairo</p>
+
+        <a href="mailto:cairojunjun@gmail.com" class="contact-btn">
+            Send Email
+        </a>
+    </div>
+</section>
+
+</body>
+</html>
