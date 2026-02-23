@@ -1,51 +1,261 @@
-<HTML>
-<BODY>
-<HEAD>
-<TITLE> De Cairos Resort in Upper Becceril Cebu </TITLE>
-<meta name= "description" content= "IBR Resort, Swimming pool, Relaxation, Cebu, Upper Becceril, Pool Resort, local getway, Mountain view, Family-friendly, Leisure destintion">
-<meta name= "keywords" content= "IBR Resort Upper Becceril Cebu offers pools, rooms, services">
-</HEAD>
-<CENTER>
-<TABLE BORDER=1>
-  
-<TR>
-<TD colspan=7>
-  
-<h1>
-<CENTER> <FONT COLOR= PURPLE> Welcome to De Cairo's Resort </CENTER>
-</h1>
-<TR>
-<BODY BACKGROUND= background.jpg>
-<TD colspan=5>
-  
-<TR>
-<TD> <FONT SIZE =4><a HREF=home.html> HOME </a> 
-<TD> <FONT SIZE =4> <a HREF=events.html> EVENTS </a> 
-<TD> <FONT SIZE =4> <a HREF=contact.html> CONTACT US </a>
-<TD> <FONT SIZE =4><a HREF=product.html> PRODUCT </a>
-      
-  
-<TR>  
-<TR>
-<TD colspan=5>
-<h2>
-<FONT COLOR=BLACK> <CENTER> <p> 
-<FONT COLOR=BLACK FONT SIZE=5> <p>This room is where you rest after you swim and if you open the terrace you will see a tranquil spot where mountain and ocean views meet. The resort offers a relaxing getaway with outdoor swimming pools, garden and terrace areas, a restaurant, Relaxing and Scenic Setting, Good Amenities, Pet Friendly, Family Friendly and air-conditioned family-friendly rooms (some with balcony or sea view). 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</TD>
-</TR>
-<TR>
-<TD colspan=4> <IMG SRC=k1.jpg height=500> 
+<title>De Cairo's Resort | Featured Offers</title>
 
- <TR>  
-<TR>
-<TD colspan=5>
-<h2>
-<FONT COLOR=BLACK> <CENTER> <p> 
-<FONT COLOR=BLACK FONT SIZE=5> <p>This iced chocolate is a chilled, creamy drink swirled with rich chocolate syrup, creating a smooth and indulgent look that’s both appetizing and refreshing. Ice chocolate coffee combines the energy boost of coffee, mood-boosting properties of chocolate, and antioxidants, making it a delicious and energizing treat. Just be mindful of sugar content and caffeine sensitivity!
- </TD>
-</TR>
-<TR>
-<TD colspan=4> <IMG SRC=name.jpg height=500> 
- 
- <TR>  
+<meta name="description" content="Enjoy premium rooms and refreshing drinks at De Cairo's Resort in Upper Becerril Cebu.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+    overflow-x:hidden;
+}
+nav{
+    background:#5e2a84;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+}
+.logo{
+    font-weight:bold;
+    font-size:25px;
+    color:white;
+}
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    position:relative;
+    transition:0.3s;
+}
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:white;
+    transition:0.3s;
+}
+.nav-links a:hover::after{
+    width:100%;
+}
+.burger{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+    gap:6px;
+}
+.burger div{
+    width:28px;
+    height:3px;
+    background:white;
+    transition:0.4s;
+}
+.hero-banner{
+    background:linear-gradient(rgba(94,42,132,0.85), rgba(94,42,132,0.85)),
+    url('background.jpg') no-repeat center center/cover;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero-banner h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.hero-banner p{
+    font-size:18px;
+}
+.section{
+    padding:80px 20px;
+    display:flex;
+    justify-content:center;
+}
+.card{
+    background:white;
+    width:100%;
+    max-width:1100px;
+    display:flex;
+    gap:40px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    position:relative;
+    transition:0.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+.badge{
+    position:absolute;
+    top:-15px;
+    left:25px;
+    background:#ff3c6f;
+    color:white;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+}
+.card img{
+    width:45%;
+    max-width:450px;
+    height:auto;
+    border-radius:15px;
+    object-fit:cover;
+}
+.content{
+    flex:1;
+}
+
+.content h2{
+    color:#5e2a84;
+    margin-bottom:20px;
+}
+
+.content p{
+    line-height:1.7;
+    margin-bottom:15px;
+}
+.book-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 28px;
+    background:#5e2a84;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.book-btn:hover{
+    background:#7b3db2;
+}
+.reverse{
+    flex-direction:row-reverse;
+}
+@media(max-width:900px){
+
+    nav{
+        padding:20px;
+    }
+
+    .nav-links{
+        position:absolute;
+        right:0;
+        top:70px;
+        background:#5e2a84;
+        flex-direction:column;
+        width:100%;
+        text-align:center;
+        gap:20px;
+        padding:30px 0;
+        transform:translateY(-150%);
+        transition:0.4s ease;
+    }
+
+    .nav-links.active{
+        transform:translateY(0);
+    }
+
+    .burger{
+        display:flex;
+    }
+
+    .card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .reverse{
+        flex-direction:column;
+    }
+
+    .card img{
+        width:100%;
+        max-width:100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">De Cairo's Resort</div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="burger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</nav>
+
+<div class="hero-banner">
+    <h1>🌟 Featured Picks – Only Now at De Cairo's Resort</h1>
+    <p>Experience comfort, relaxation, and refreshing indulgence in Upper Becerril, Cebu.</p>
+</div>
+
+<section class="section">
+    <div class="card">
+        <div class="badge">🔥 Best Pick</div>
+        <img src="K1.jpg">
+
+        <div class="content">
+            <h2>Relaxing Family Room</h2>
+            <p>This room is where you rest after you swim and if you open the terrace you will see a tranquil spot where mountain and ocean views meet. The resort offers a relaxing getaway with outdoor swimming pools, garden and terrace areas, a restaurant, Relaxing and Scenic Setting, Good Amenities, Pet Friendly, Family Friendly and air-conditioned family-friendly rooms (some with balcony or sea view).</p>
+            <a href="contact.html" class="book-btn">Book This Room Now</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="card reverse">
+        <div class="badge">✨ Must Try</div>
+        <img src="name.jpg">
+
+        <div class="content">
+            <h2>Signature Iced Chocolate</h2>
+            <p>This iced chocolate is a chilled, creamy drink swirled with rich chocolate syrup, creating a smooth and indulgent look that’s both appetizing and refreshing. Ice chocolate coffee combines the energy boost of coffee, mood-boosting properties of chocolate, and antioxidants, making it a delicious and energizing treat. Just be mindful of sugar content and caffeine sensitivity!</p>
+            <a href="contact.html" class="book-btn">Order During Your Stay</a>
+        </div>
+    </div>
+</section>
+
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
